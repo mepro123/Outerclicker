@@ -9,7 +9,7 @@ Gui, Add, Text, x10 y40 w200, ▶ Press [ to START
 Gui, Add, Text, x10 y65 w200, ⏹ Press ] to STOP
 Gui, Add, Text, x10 y90 w200, ⚠ Might lag at high speeds!
 Gui, Add, Button, x10 y120 w80 gExitScript, Exit
-Gui, Show, w220 h160, Ultra-Fast Clicker
+Gui, Show, w220 h160, OuterClickerMain
 
 [::  ; Start clicking
     if (!Toggle) {
