@@ -4,7 +4,7 @@ SetBatchLines -1
 ListLines Off
 global Toggle := False
 
-; Create GUI for Clicker
+; Create GUI
 Gui, Font, s10, Verdana
 Gui, Add, Text, x10 y10 w200 vStatus, Status: OFF 🔴
 Gui, Add, Text, x10 y40 w200, ▶ Press [ to START
@@ -35,7 +35,3 @@ return
 ExitScript:
     ExitApp
 return
-)
-
-ExitApp:
-    ExitApp
