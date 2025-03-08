@@ -1,7 +1,5 @@
 #Persistent
 #SingleInstance Force
-SetBatchLines -1
-ListLines Off
 global Toggle := False
 
 ; Create GUI
