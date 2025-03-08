@@ -1,0 +1,41 @@
+#Persistent
+#SingleInstance Force
+SetBatchLines -1
+ListLines Off
+global Toggle := False
+
+; Create GUI for Clicker
+Gui, Font, s10, Verdana
+Gui, Add, Text, x10 y10 w200 vStatus, Status: OFF 🔴
+Gui, Add, Text, x10 y40 w200, ▶ Press [ to START
+Gui, Add, Text, x10 y65 w200, ⏹ Press ] to STOP
+Gui, Add, Text, x10 y90 w200, ⚠ Might lag at high speeds!
+Gui, Add, Button, x10 y120 w80 gExitScript, Exit
+Gui, Show, w220 h160, Ultra-Fast Clicker
+
+[::  ; Start clicking
+    if (!Toggle) {
+        Toggle := True
+        GuiControl,, Status, Status: ON 🟢
+        SetTimer, ClickLoop, -1  ; Start clicking
+    }
+return
+
+]::  ; Stop clicking
+    Toggle := False
+    GuiControl,, Status, Status: OFF 🔴
+return
+
+ClickLoop:
+    while (Toggle) {
+        SendInput {Click}
+    }
+return
+
+ExitScript:
+    ExitApp
+return
+)
+
+ExitApp:
+    ExitApp
